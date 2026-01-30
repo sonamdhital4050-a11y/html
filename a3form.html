@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Course Enrollment Form</title>
+</head>
+<body>
+
+    <!-- Main heading -->
+    <h2>Student Course Enrollment System</h2>
+
+    <!-- Form starts here -->
+    <form>
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Name -->
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Create a password" required><br><br>
+
+            <!-- Date of Birth -->
+            <label for="DOB">Date of Birth:</label><br>
+            <input type="date" id="DOB" name="DOB" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Gender Selection Section -->
+        <fieldset>
+            <legend>Gender</legend>
+
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Course Selection Section -->
+        <fieldset>
+            <legend>Course Selection</legend>
+
+            <label for="course">Choose Course:</label><br>
+            <select id="course" name="course" required>
+                <option value="">--Select Course--</option>
+                <option value="BSc CSIT">BSc CSIT</option>
+                <option value="BCA">BCA</option>
+                <option value="BIM">BIM</option>
+                <option value="BIT">BIT</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Skills Selection Section -->
+        <fieldset>
+            <legend>Skills</legend>
+
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label><br>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label><br>
+
+            <input type="checkbox" id="c" name="skills" value="C Programming">
+            <label for="c">C Programming</label><br>
+
+            <input type="checkbox" id="java" name="skills" value="Java">
+            <label for="java">Java</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Address Section -->
+        <fieldset>
+            <legend>Address</legend>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="35" placeholder="Enter your address" required></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Form Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+    <!-- Form ends here -->
+
+</body>
+</html>

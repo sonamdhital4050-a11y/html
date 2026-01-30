@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Course Enrollment Form</title>
+
+    <!-- Basic Beginner CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #444;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 95%;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 120px;
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .note {
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main container using DIV -->
+    <div class="container">
+
+        <!-- Heading -->
+        <h2>Student Course Enrollment System</h2>
+
+        <!-- Small note using span -->
+        <p class="note">
+            <span>* All fields are mandatory</span>
+        </p>
+
+        <hr>
+
+        <!-- Form starts -->
+        <form>
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label>Full Name:</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Email:</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Password:</label>
+                <input type="password" placeholder="Create password" required>
+
+                <label>Date of Birth:</label>
+                <input type="date" required>
+            </fieldset>
+
+            <!-- Gender -->
+            <fieldset>
+                <legend>Gender</legend>
+
+                <input type="radio" name="gender" required> Male
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Other
+            </fieldset>
+
+            <!-- Course -->
+            <fieldset>
+                <legend>Course</legend>
+
+                <select required>
+                    <option value="">--Select Course--</option>
+                    <option>BSc CSIT</option>
+                    <option>BCA</option>
+                    <option>BIM</option>
+                    <option>BIT</option>
+                </select>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+
+                <input type="checkbox"> HTML
+                <input type="checkbox"> CSS
+                <input type="checkbox"> C.Programming
+                <input type="checkbox"> Java
+            </fieldset>
+
+            <!-- Address -->
+            <fieldset>
+                <legend>Address</legend>
+
+                <textarea rows="4" placeholder="Enter your address" required></textarea>
+            </fieldset>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+        <!-- Form ends -->
+
+    </div>
+
+</body>
+</html>

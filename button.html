@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Page View</title>
+    <style>
+        .view {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- View 1 -->
+    <div id="view1" class="view active">
+        <h2>Welcome Page</h2>
+        <p>This is the first view.</p>
+        <button onclick="showView2()">Next</button>
+    </div>
+
+    <!-- View 2 -->
+    <div id="view2" class="view">
+        <h2>Second Page</h2>
+        <p>This is the next view.</p>
+        <button onclick="showView1()">Back</button>
+    </div>
+
+    <script>
+        function showView2() {
+            document.getElementById("view1").classList.remove("active");
+            document.getElementById("view2").classList.add("active");
+        }
+
+        function showView1() {
+            document.getElementById("view2").classList.remove("active");
+            document.getElementById("view1").classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
