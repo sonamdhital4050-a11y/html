@@ -956,25 +956,134 @@
 // }
 
 // pointer to derived object in c++ (pointer to derived object is used to access the members of the derived class using the pointer of the base class, it can be done using virtual functions or function overriding)
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+//     public:
+//     void sound(){
+//         cout<<"Animal sound"<<endl;
+//     }
+// };
+// class Dog : public Animal{
+//     public:
+//     void bark(){
+//         cout<<"Dog barks"<<endl;
+//     }
+// };
+// int main(){
+//     Dog d;
+//     Dog *ptr = &d;
+//     ptr->sound();
+//     ptr->bark();
+//     return 0;
+// }
+
+// function overriding in c++ (function overriding is used to redefine the way a function works in the derived class, it can be done using virtual functions or function hiding)
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+//     public:
+//     virtual void sound(){
+//         cout<<"Animal makes a sound"<<endl;
+//     }
+// };
+// class Dog : public Animal{
+//     public:
+//     void sound() override{
+//         cout<<"Dog barks"<<endl;
+//     }
+// };
+// int main(){
+//     Animal *ptr;
+//     Dog d;
+//     ptr = &d;
+//     ptr->sound();
+//     return 0;
+// }
+
+// pure virtual function in c++ (pure virtual function is used to create an abstract class, it is declared using the =0 syntax, and it must be overridden in the derived class)
+// #include <iostream>
+// using namespace std;
+
+// class Shape{
+//     public:
+//     virtual void area()=0; // pure virtual function
+// };
+// class Circle : public Shape{
+//     public:
+//     void area() override{
+//         cout<<"Area of circle"<<endl;
+//     }
+// };
+// int main(){
+//     Circle c;
+//     Shape *ptr = &c;
+//     ptr->area();
+//     return 0;
+// }
+
+// c++ program using an abstract class and a pure virtual function to calculate the area of a different shapes (circle, rectangle, triangle) using inheritance and polymorphism
+// #include <iostream>
+// using namespace std;
+
+// class Shape{
+//     public:
+//     virtual void area()=0; // pure virtual function
+// };
+// class Circle : public Shape{
+//     public:
+//     float radius;
+//     public:
+//     Circle(float r){
+//         radius = r; 
+//     }
+//     void area() override{
+//         cout<<"Area of circle: "<<3.14*radius*radius<<endl;
+//     }
+// };
+// class Rectangle : public Shape{
+//     public:
+//     float length;
+//     float breadth;
+//     public:
+//     Rectangle(float l, float b){
+//         length = l;
+//         breadth = b; 
+//     }
+//     void area() override{
+//         cout<<"Area of rectangle: "<<length*breadth<<endl;
+//     }
+// };
+// int main(){
+//     Circle c(5);
+//     Rectangle r(10, 20);
+//     Shape *ptr;
+//     ptr = &c;
+//     ptr->area();
+//     ptr = &r;
+//     ptr->area();
+//     return 0;
+// }
+
+//exceptional handling in c++ (exceptional handling is used to handle runtime errors, it can be done using try, catch, and throw keywords)
 #include <iostream>
 using namespace std;
-
-class Animal{
-    public:
-    void sound(){
-        cout<<"Animal sound"<<endl;
-    }
-};
-class Dog : public Animal{
-    public:
-    void bark(){
-        cout<<"Dog barks"<<endl;
-    }
-};
 int main(){
-    Dog d;
-    Dog *ptr = &d;
-    ptr->sound();
-    ptr->bark();
-    return 0;
+    int a, b;
+    
+    cin >> a >> b;
+    try{
+        if(b==0){
+            throw "Division by zero is not allowed";
+        }
+        double c = double(a)/b;
+        cout<< c<<endl;
+        }
+        catch(const char* msg){
+            cout<< "Exception: "<< msg <<endl;
+        }
+        cout<< "Program completed" <<endl;
+        return 0;
 }
