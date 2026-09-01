@@ -1068,22 +1068,37 @@
 // }
 
 //exceptional handling in c++ (exceptional handling is used to handle runtime errors, it can be done using try, catch, and throw keywords)
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int a, b;
+    
+//     cin >> a >> b;
+//     try{
+//         if(b==0){
+//             throw "Division by zero is not allowed";
+//         }
+//         double c = double(a)/b;
+//         cout<< c<<endl;
+//         }
+//         catch(const char* msg){
+//             cout<< "Exception: "<< msg <<endl;
+//         }
+//         cout<< "Program completed" <<endl;
+//         return 0;
+// }
+
+//put pointer in c++ (put pointer is used to write data to a file, it can be done using ofstream class and put() function)
 #include <iostream>
+#include <fstream>
 using namespace std;
 int main(){
-    int a, b;
-    
-    cin >> a >> b;
-    try{
-        if(b==0){
-            throw "Division by zero is not allowed";
-        }
-        double c = double(a)/b;
-        cout<< c<<endl;
-        }
-        catch(const char* msg){
-            cout<< "Exception: "<< msg <<endl;
-        }
-        cout<< "Program completed" <<endl;
-        return 0;
+    ofstream file("data.txt");
+    file << "Hello World";
+
+    cout << "current position: " << file.tellp() << endl;
+    file.seekp(6);
+    file << "C++";
+    file.close();
+    return 0;
 }
